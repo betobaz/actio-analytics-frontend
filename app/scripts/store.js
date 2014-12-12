@@ -1,0 +1,1 @@
+ActioAnalyticsFrontend.ApplicationAdapter = DS.FixtureAdapter;

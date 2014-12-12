@@ -1,0 +1,9 @@
+<h1>Instances</h1>
+
+<ul>
+ {{#each model}}
+ <li>{{#link-to 'instance' this}}{{this.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
