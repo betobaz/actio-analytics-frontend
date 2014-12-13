@@ -24,14 +24,7 @@ ActioAnalyticsFrontend.Instancestatus = DS.Model.extend({
       }
       return result;
     }.property('callsPerHours',
-      'callsPerHours.0',
-      'callsPerHours.0',
-      'callsPerHours.0',
-      'callsPerHours.0',
-      'callsPerHours.0',
-      'callsPerHours.0',
-      'callsPerHours.0',
-      )
+      'callsPerHours.0','callsPerHours.1','callsPerHours.2','callsPerHours.3','callsPerHours.4','callsPerHours.5','callsPerHours.6','callsPerHours.7','callsPerHours.8','callsPerHours.9','callsPerHours.10','callsPerHours.11','callsPerHours.12','callsPerHours.13','callsPerHours.14','callsPerHours.15','callsPerHours.16','callsPerHours.17','callsPerHours.18','callsPerHours.19','callsPerHours.20','callsPerHours.21','callsPerHours.22','callsPerHours.23')
 
 
 });
