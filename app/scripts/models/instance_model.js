@@ -2,9 +2,9 @@
 ActioAnalyticsFrontend.Instance = DS.Model.extend({
     name: DS.attr('string'),
 
-    sugarUrl: DS.attr('string'),
+    sugar_url: DS.attr('string'),
 
-    instanceId: DS.attr('string'),
+    instance_id: DS.attr('string'),
 
     agents: DS.hasMany('agent', {async: true}),
 
@@ -24,7 +24,7 @@ ActioAnalyticsFrontend.Instance.reopen({
 
 // delete below here if you do not want fixtures
 ActioAnalyticsFrontend.Instance.FIXTURES = [
-  
+  /*
   {
     id: 1,
     
@@ -53,6 +53,6 @@ ActioAnalyticsFrontend.Instance.FIXTURES = [
 
     agents: []
     
-  }
+  }*/
   
 ];
