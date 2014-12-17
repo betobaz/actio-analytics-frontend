@@ -4,11 +4,11 @@ ActioAnalyticsFrontend.Instance = DS.Model.extend({
 
     sugar_url: DS.attr('string'),
 
-    instance_id: DS.attr('string'),
+    actio_instance_id: DS.attr('string'),
 
     agents: DS.hasMany('agent', {async: true}),
 
-    instancestatus: DS.belongsTo('instancestatus')
+    instancestatus: DS.belongsTo('instance-status')
 
 });
 
@@ -23,36 +23,4 @@ ActioAnalyticsFrontend.Instance.reopen({
 });
 
 // delete below here if you do not want fixtures
-ActioAnalyticsFrontend.Instance.FIXTURES = [
-  /*
-  {
-    id: 1,
-    
-    name: 'Merxbp',
-    
-    sugarUrl: 'https://merxbp.sugarondemand.com/',
-    
-    instanceId: 'foo',
-
-    instancestatus: 1,
-
-    agents: [1,2]
-    
-  },
-  
-  {
-    id: 2,
-    
-    name: 'Paquetexpress',
-    
-    sugarUrl: 'https://paquetexpress.sugarondemand.com/',
-    
-    instanceId: 'foo',
-
-    instancestatus: 2,
-
-    agents: []
-    
-  }*/
-  
-];
+ActioAnalyticsFrontend.Instance.FIXTURES = [];

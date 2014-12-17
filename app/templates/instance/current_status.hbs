@@ -1,0 +1,51 @@
+<h1>Instance Status</h1>
+
+<div>
+  <h3>Agents</h3>
+  {{#each this.agents}}
+    <li>
+      <strong>{{sugar_user_name}}</strong><span class="label label-success">{{status}}</span>
+    </li>
+  {{/each}}
+</div>
+<div>
+  <h3>Activity</h3>
+  <table>
+    <tbody>
+      <tr>
+        <td>Total calls</td>
+        <td><span class="badge badge-success">{{this.instancestatus.total_calls}}</span></td>
+      </tr>
+      <tr>
+        <td>Inboud calls</td>
+        <td><span class="badge badge-success">{{this.instancestatus.inbound_calls}}</span></td>
+      </tr>
+      <tr>
+        <td>Inboud lost calls</td>
+        <td><span class="badge badge-success">{{this.instancestatus.inbound_lost_calls}}</span></td>
+      </tr>
+      <tr>
+        <td>Outbound calls</td>
+        <td><span class="badge badge-success">{{this.instancestatus.outbound_calls}}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h3>Calls per hour</h3>
+  <table>
+    <tbody>
+      {{!-- {{#each this.instancestatus.calls_per_hoursToArray}}
+        <tr>
+          <td>
+            <strong>{{hour}}:</strong>
+          </td>
+          <td>
+            <span class="badge badge-success">{{value}}</span>
+          </td>
+        </tr>
+      {{/each}} --}}
+    </tbody>
+  </table>
+</div>
+

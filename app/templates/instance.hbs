@@ -1,18 +1,18 @@
 <h1>Instance</h1>
 
 <table>
-  {{#each model.attributes}}
-  <tr>
-    <td>
-      <strong>{{this.key}}:</strong>
-    </td>
-    <td>
-      {{this.value}}
-    </td>
-  </tr>
-  {{/each}}
+  <tbody>{{#each model.attributes}}
+    <tr>
+      <td>
+        <strong>{{this.key}}:</strong>
+      </td>
+      <td>
+        {{this.value}}
+      </td>
+    </tr>
+    {{/each}}</tbody>
 </table>
 
-{{#link-to 'instance.edit' model}}Change{{/link-to}}
+{{#link-to 'instance.current_status' model}}Current Status{{/link-to}}
 
 {{outlet}}

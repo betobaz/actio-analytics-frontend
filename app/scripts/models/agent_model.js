@@ -4,7 +4,7 @@ ActioAnalyticsFrontend.Agent = DS.Model.extend({
 
     status: DS.attr('string'),
 
-    sugarUserName: DS.attr('string'),
+    sugar_user_name: DS.attr('string'),
 
     entered: DS.attr('date'),
 
@@ -22,36 +22,4 @@ ActioAnalyticsFrontend.Agent.reopen({
 });
 
 // delete below here if you do not want fixtures
-ActioAnalyticsFrontend.Agent.FIXTURES = [
-  
-  {
-    id: 1,
-
-    instance: 1,
-    
-    extension: '1016',
-    
-    status: 'online',
-    
-    sugarUserName: 'Pedrob',
-    
-    entered: 'foo'
-    
-  },
-  
-  {
-    id: 2,
-
-    instance: 1,
-    
-    extension: '1022',
-    
-    status: 'offline',
-    
-    sugarUserName: 'Ramon',
-    
-    entered: 'foo'
-    
-  }
-  
-];
+ActioAnalyticsFrontend.Agent.FIXTURES = [];

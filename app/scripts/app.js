@@ -1,28 +1,24 @@
 var ActioAnalyticsFrontend = window.ActioAnalyticsFrontend = Ember.Application.create({
 	ready: function() {
 		var self = this;
-		var socket = io.connect('http://localhost:1337');
+		var socket = io.connect('http://192.168.1.95:1337');
 		this.socket = socket;
-		socket.on('start', function (argument) {
-			//socket.emit('instance', '548b9580b37113951dc23a2e');
-
-		})
+		
 		socket.on('findAll', _.bind(function(data){
-			console.log('data: ',data);	
+			console.log('data: ', data);	
 			if(data.records && data.records.length){
-				
-				if(data.model == 'Instance' && {
-					_.each(data.records, function(item){
-						ActioAnalyticsFrontend[data.model].store.push(data.model, item);
-					});
-				}
+				_.each(data.records, function(item){
+					ActioAnalyticsFrontend[data.model].store.push(data.model, item);
+				});
 			}		
-
 		}, self));
 
-		socket.on('instancestatus', _.bind(function(instance){
-			//debugger;
-			console.log('message: ',instance);			
+		socket.on('update', _.bind(function(data){
+			console.log('data: ', data);	
+			debugger;
+			if(data.record){
+				ActioAnalyticsFrontend[data.model].store.update(data.model, data.record);
+			}		
 		}, self));
 
 	},
